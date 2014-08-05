@@ -1,0 +1,2 @@
+este programa se encarga de guardar datos de los empleados en la empresa y sacar cuanto es el valor a pagarles en la
+quincena mediante el uso de la informacion de cuanto a las horas laboradas en un dia
