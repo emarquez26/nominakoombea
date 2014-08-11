@@ -29,9 +29,3 @@ class Conexion
     	end
 	end
 end
-
-class Employee < Conexion
-    def newc(nom, aplld, id, telfn, mail, cargo, vlhr, hrtr)
-        insert(nom, aplld, id, telfn, mail, cargo, vlhr, hrtr)
-    end
-end

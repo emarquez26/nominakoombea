@@ -1,4 +1,4 @@
-@pag=class Application
+class Application
   def info(valord,valorp)
     datos_personales = {
     :a_pagar_por_dia => valord,

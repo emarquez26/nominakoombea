@@ -8,14 +8,13 @@ get '/' do
 end
 get '/savemp' do
   File.read('views/savemp.html.erb')
+  #newemp= Conexion.new
 end
 
 post '/savemp/new' do
-  load 'lib/application.rb'
-  newemp= Employee.new
-  nom=params[:name]; aplld=params[:apll]; id=params[:id]; telfn=params[:tel];
-  mail=params[:mail]; cargo=params[:carge]; vlhr=params[:vlhrs]; hrtr=params[:hrtrab]
-  newemp.newc(nom, aplld, id, telfn, mail, cargo, vlhr, hrtr)
+  newemp= Conexion.new.insert("#{params[:name]}", "#{params[:apll]}",
+  "#{params[:id]}", "#{params[:tel]}", "#{params[:mail]}", "#{params[:carge]}",
+  "#{params[:vlhrs]}", "#{params[:hrtrab]}")
   redirect '/savemp'
 end
 
