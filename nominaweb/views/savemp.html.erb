@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nomina-Ingresar Empleado</title>
+	<link rel="stylesheet" type="text/css" href="style/styleweb.css">
+</head>
+<body>
+	<form action="/savemp/new" method="post" name="save">
+		<center>
+			<div id="nm">
+	      		<h3>√ Registro de Empleado</h3>
+	    	</div><br>
+	      	<nav>
+				<li class="lin"><a href="/savemp">Agregar Empleado</a></li><br>
+				<li class="lin"><a href="/watchemp">Ver salario de Empleado</a></li>
+			</nav><div class='clear'></div><br>
+			<div id='ew'>
+	    		<div class="fom"><br>
+	      			<br>
+	      				<div class="img">
+	      					<img src="images/emp.png">
+	      				</div>
+		      		<p><label>Nombre del Empleado <input required class="borde" name="name"  placeholder="Digite nombre" /></label></p>
+		      		<p><label>Apellido del Empleado <input type="text" class="borde" name="apll" placeholder="Digite apellido" /></label></p>
+		      		<p><label>Identificacion del Empleado <input class="borde" name="id" required placeholder="Digite ID" /></label></p>
+		      		<p><label>Telefono del Empleado <input class="borde" name="tel" value="" placeholder="Numero de telefono" /></label></p>
+		      		<p><label>E-mail del Empleado <input type="email" class="borde" name="mail" required placeholder="Digite E-mail" /></label></p>
+		      		<p><label>Cargo del Empleado <input class="borde" name="carge" required placeholder="Digite cargo" /></label></p>
+		      		<p><label>Valor hora de Trabajo <input class="borde" name="vlhrs" required placeholder="valor por hora" /></label></p>
+		      		<p><label>Horas Trabajadas por el Empleado <input type="text" class="borde" name="hrtrab" required placeholder="Digite numero de horas trabajadas" /></label></p>
+		      		<input type="submit" class="btn" value="Guardar nuevo Empleado">
+		      	</div>
+	    	</div>
+		</center>
+	</form>
+</body>
+</html>
