@@ -1,0 +1,60 @@
+<% require 'sqlite3'
+load '_form/database.rb' 
+load 'lib/application.rb' %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nomina-Salrio Empleado</title>
+  <link rel="stylesheet" type="text/css" href="style/styleweb.css">
+</head>
+<body>
+  <center>
+    <div id="nm">
+          <h3>√ Lista de Empleado</h3>
+      </div><br>
+      <nav>
+        <li class="lin"><a href="/savemp">Agregar Empleado</a></li><br>
+        <li class="lin"><a href="/watchemp">Ver salario de Empleado</a></li>
+    </nav><div class='clear'></div><br>
+    <div id='ew'>
+        <div class="fom"><br>
+          <br>
+            <div class="img">
+              <img src="images/empleado.png" width="300" height="300">
+            </div>
+              <% list= Employee.new.watch %>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Nombre del Empleado</th>
+                  <th>Apellido del empleado</th>
+                  <th>Identificacion del empleado</th>
+                  <th>Teleono del Empleado</th>
+                  <th>E-mail del Empleado</th>
+                  <th>Cargo</th>
+                  <th>Valor por Hora</th>
+                  <th>Numero de horas Trabajadas</th>
+                  <th>Valor a pagar al Empleado</th>
+                </tr>
+              </thead>
+              <% list.each do |info| %>
+                <tbody>
+                  <tr>
+                    <td><%= info["name"].to_s %></td>
+                    <td><%= info["apll"].to_s %></td>
+                    <td><%= info["id"].to_s %></td>
+                    <td><%= info["telf"].to_s %></td>
+                    <td><%= info["mail"].to_s %></td>
+                    <td><%= info["cargo"].to_s %></td>
+                    <td><%= info["vlhr"].to_s %></td>
+                    <td><%= info["hrtr"].to_s %></td>
+                    <td><%= info["hrtr"].to_i * info["vlhr"].to_i %></td>
+                  </tr>
+                </tbody>
+              <% end %>
+            </table>
+        </div>
+    </div>
+  </center>
+</body>
+</html>

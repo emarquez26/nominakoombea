@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nomina-Options</title>
+  <link rel="stylesheet" type="text/css" href="style/styleweb.css">
+</head>
+<body>
+  <form action="/index" method="get" name="save">
+    <center>
+      <div id="nm">
+            <h3>√ Escojer accion a realizar</h3>
+        </div><br><br><br><br><br><br>
+      <div id='ew'>
+          <div class="fom"><br>
+              <br>
+              <input type="button" value="Agregar Empleado Nuevo" onclick="document.save.action = '/savemp';document.save.submit()" class="chooise"><br><br>
+              <input type="button" value="Ver lista de Empleados" onclick="document.save.action = '/watchemp';document.save.submit()" class="chooise">
+            </div>
+        </div>
+    </center>
+  </form>
+</body>
+</html>
